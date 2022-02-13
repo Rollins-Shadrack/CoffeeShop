@@ -1,0 +1,195 @@
+<h1> </h1>
+
+</form><nav style="background-color: black;" class="nav1 navbar navbar-expand-lg navbar-light fixed-top ">
+    <div class="container">
+      <a class="text-warning navbar-brand" href="/"><i class="bi bi-flower1 h1"></i> Coffee Shop</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class=" bg-warning navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <div class="navbar-nav ms-auto ">
+          <a class="nav-link text-light h4" href="" >Welcome <span class="text-info"><%= user.name %></span></a>
+          <a class="nav-link text-light" href=""><form action="/logout?_method=DELETE" method="POST">
+            <button type="submit" class="text-warning btn btn-outline-info">Log Out</button></a>
+         
+        </div>
+      </div>
+    </div>
+</nav>
+<section style="background-color: black;" class="p-5 text-dark ">
+<div class="row">
+  <div class="col-md-3 g-5">
+    <div class="card p-3">
+      <div class="car-title"><h5>Name: <span class="text-warning"> <%= user.name %></span></h5></div>
+      <div class="car-title"><h5>Email: <span class="text-warning"> <%= user.email %></span></h5></div>
+      <div class="card-body">
+        <p> Welcome to Coffee shop where delivering the best
+          the best quality products and offering you the best services is our top priority
+        </p>
+        <!-- <a style="text-decoration: none;" href="/users/UploadPhoto" class=" text-center text-info">Upload Photo</a> -->
+      </div>
+    </div>
+  </div>
+  <div class="col-md-9">
+    <div class="row">
+      <div class="col-md-4 g-4">
+        <div class="card  bg-dark">
+          <div class="card-image text-center  "><img src="../images/product3.jpg" alt="" style="width: 268px; height: 200px; border-radius: 10px;" class="image-fluid blog"></div>
+          <div class="card-body text-center">
+            <h6 class="text-info">House Blend</h6>
+            <div>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star text-warning"></i>
+              <i class="bi bi-star text-warning"></i>
+              <i class="bi bi-star text-warning"></i>
+             </div>
+            <button class="mt-3 btn btn-outline-warning">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 g-4">
+        <div class="card  bg-dark">
+          <div class="card-image text-center  "><img src="../images/product7.jpg" alt="" style="width: 268px; height: 200px; border-radius: 10px;" class="image-fluid blog"></div>
+          <div class="card-body text-center">
+            <h6 class="text-info">Monsooned Malabar</h6>
+            <div>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star text-warning"></i>
+              <i class="bi bi-star text-warning"></i>
+              <i class="bi bi-star text-warning"></i>
+              <i class="bi bi-star text-warning"></i>
+             </div>
+            <button class="mt-3 btn btn-outline-warning">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 g-4">
+        <div class="card  bg-dark">
+          <div class="card-image text-center  "><img src="../images/product6.jpg" alt="" style="width: 268px; height: 200px; border-radius: 10px;" class="image-fluid blog"></div>
+          <div class="card-body text-center">
+            <h6 class="text-info">Milano</h6>
+               <div>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-half text-warning"></i>
+                <i class="bi bi-star text-warning"></i>
+                <i class="bi bi-star text-warning"></i>
+               </div>
+            <button class="mt-3 btn btn-outline-warning">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 g-4">
+        <div class="card  bg-dark">
+          <div class="card-image text-center  "><img src="../images/product8.jpg" alt="" style="width: 268px; height: 200px; border-radius: 10px;" class="image-fluid blog"></div>
+          <div class="card-body text-center">
+            <h6 class="text-info">Florentine</h6>
+            <div>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star text-warning"></i>
+              <i class="bi bi-star text-warning"></i>
+              <i class="bi bi-star text-warning"></i>
+              <i class="bi bi-star text-warning"></i>
+             </div>
+            <button class="mt-3 btn btn-outline-warning">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 g-4">
+        <div class="card  bg-dark">
+          <div class="card-image text-center  "><img src="../images/product9.jpg" alt="" style="width: 268px; height: 200px; border-radius: 10px;" class="image-fluid blog"></div>
+          <div class="card-body text-center">
+            <h6 class="text-info">Noble</h6>
+            <div>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star text-warning"></i>
+              <i class="bi bi-star text-warning"></i>
+             </div>
+            <button class="mt-3 btn btn-outline-warning">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 g-4">
+        <div class="card  bg-dark">
+          <div class="card-image text-center  "><img src="../images/product10.jpg" alt="" style="width: 268px; height: 200px; border-radius: 10px;" class="image-fluid blog"></div>
+          <div class="card-body text-center">
+            <h6 class="text-info">Robert Timms</h6>
+               <div>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-half text-warning"></i>
+                <i class="bi bi-star text-warning"></i>
+                <i class="bi bi-star text-warning"></i>
+               </div>
+            <button class="mt-3 btn btn-outline-warning">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 g-4">
+        <div class="card  bg-dark">
+          <div class="card-image text-center  "><img src="../images/product1.jpg" alt="" style="width: 268px; height: 200px; border-radius: 10px;" class="image-fluid blog"></div>
+          <div class="card-body text-center">
+            <h6 class="text-info">Chipembere</h6>
+            <div>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-half text-warning"></i>
+             </div>
+            <button class="mt-3 btn btn-outline-warning">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 g-4">
+        <div class="card  bg-dark">
+          <div class="card-image text-center  "><img src="../images/product13.jpg" alt="" style="width: 268px; height: 200px; border-radius: 10px;" class="image-fluid blog"></div>
+          <div class="card-body text-center">
+            <h6 class="text-info">Lucky Lab</h6>
+            <div>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+             </div>
+            <button class="mt-3 btn btn-outline-warning">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 g-4">
+        <div class="card  bg-dark">
+          <div class="card-image text-center  "><img src="../images/product14.jpg" alt="" style="width: 268px; height: 200px; border-radius: 10px;" class="image-fluid blog"></div>
+          <div class="card-body text-center">
+            <h6 class="text-info">Dark Roast</h6>
+               <div>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-half text-warning"></i>
+                <i class="bi bi-star text-warning"></i>
+                <i class="bi bi-star text-warning"></i>
+               </div>
+            <button class="mt-3 btn btn-outline-warning">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section style="background-color: black;" class=" text-center text-light p-3">
+  <div class="container">
+    <i class="bi bi-facebook h3 text-primary mx-1 icon "></i>
+    <i class="bi bi-whatsapp h3 text-success mx-1 icon"></i>
+    <i class="bi bi-twitter h3 text-info mx-1 icon"></i>
+    <i class="bi bi-instagram h3 text-danger mx-1 icon"></i>
+  </div>
+  <div class=" containertext-center mt-2"><h3>Created By <strong class="text-warning">Roll</strong>tech Copyright &copy; 2022</h3></div>
+</section>

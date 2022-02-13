@@ -1,0 +1,54 @@
+<div class="reg">
+    
+    <div  class="row mt-5">
+        <div class="col-md-6 m-auto">
+           <div class="card card-body">
+            <h1 class="text-center text-warning">Register</h1>
+            <%- include ("./partials/messages") %>
+            <form action="/users/register" method="POST" class=" container">
+      
+                <div class="form-group justify-content-center">
+                    <label  for="username">Username </label>
+                    <input style="width:400px" type="text"
+                    id="name"
+                    name="name"
+                    class="form-control"
+                    placeholder="enter username"
+                    value="<% typeof name != 'undefined' ? name : '' %>">
+                </div>
+                <div class="form-group">
+                    <label for="email">email</label>
+                    <input style="width:400px"  type="email"
+                    id="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="enter email"
+                    value="<% typeof email != 'undefined' ? email   : ''%>">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input style="width:400px"  type="password"
+                    id="password"
+                    name="password"
+                    class="form-control"
+                    placeholder="enter password"
+                    value="<% typeof password != 'undefined' ? password : ''%>">
+                </div>
+                <div class="form-group">
+                    <label for="password2">Confirm Password</label>
+                    <input style="width:400px"  type="password"
+                    id="password2"
+                    name="password2"
+                    class="form-control"
+                    placeholder="confirm password"
+                    value="<% typeof password != 'undefined' ? password : ''%>">
+                </div>
+                <div class="form-group mt-2"><button type="submit" class="btn btn-success btn-block">Register</button></div>
+            </form>
+            <p class="lead mt-3"> <a style="text-decoration: none; color: goldenrod;" href="/">Return to HomePage</a></p>
+            <p class="lead mt-4">Have an Account? <a href="/users/login">Login</a> </p>
+           </div>
+        </div>
+    </div>
+    
+</div> 

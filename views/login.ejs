@@ -1,0 +1,36 @@
+<div class="login">
+  
+    <div  class="row my-2">
+        <div class="col-md-6 m-auto">
+          <div class="card card-body">
+            <h1 class="text-center text-warning">Login</h1>
+            <%- include ("./partials/messages") %>  
+            <form action="/users/login" method="POST" class=" container">
+                <div class="form-group">
+                    <label for="email">email</label>
+                    <input style="width:400px"  type="email"
+                    id="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="enter email"
+                    value="<% typeof email != 'undefined' ? email   : ''%>">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input style="width:400px"  type="password"
+                    id="password"
+                    name="password"
+                    class="form-control"
+                    placeholder="enter password"
+                    value="<% typeof password != 'undefined' ? password : ''%>">
+                </div>
+                <div class="form-group mt-2"><button type="submit" class="btn btn-success btn-block">Login</button></div>
+            </form>
+            <p class="lead mt-4">Don't have an Account? <a style="text-decoration: none;" href="/users/register">Register</a> Create new account </p>
+            <p  class="lead mt-4"><a style="text-decoration: none;" href="/users/forgotPass"> Forgot Password?</a> </p>
+
+          </div>
+        </div>
+    </div>
+  
+</div>
