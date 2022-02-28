@@ -1,12 +1,14 @@
 const validationResult = require('express-validator')
 const registerService = require('../services/registerService')
 const connection = require('../Database/connectionDB')
+const nodemailer = require('nodemailer')
 const bcrypt = require('bcryptjs')
 let getRegisterPage = (req,res)=>{
     return res.render('register')
 
 }
 let createNewUser = (req,res)=>{
+    let image = 'default3.jpg'
     const{name,email,password,password2} = req.body;
     //console.log(req.body)
     let errors = [];
@@ -54,9 +56,40 @@ let createNewUser = (req,res)=>{
             
         }
         else{
-            const sql2 = `INSERT INTO userauth(name,email,password) VALUES(?,?,?) `
+            let mailTransporter = nodemailer.createTransport({
+                host: 'smtp.gmail.com',
+                port: 465,
+                secure: true, // use SSL
+                auth: {
+                    user: 'rshadrackochieng@gmail.com',
+                    pass: 'dufhbqmcdepbhvdk'
+                }
+            })
+            
+            let details = {
+                from:'rshadrackochieng@gmail.com',
+                to:email,
+                subject:'Coffee Shop',
+                text:"Welcome to Coffee Shop",
+                html:`<h3>Thank You ${name} for choosing Coffee Shop</h3>
+
+                <p class="lead">Here at Coffee Shop we are delighted to be providing you with latest coffee updates and good quality coffee</p>
+                
+                <h4>Thanks ${name} for the support</h4>`
+            }
+            
+            mailTransporter.sendMail(details,(err)=>{
+                if(err){
+                    console.log('it has an error',err)
+                }else{
+                    console.log('email sent')
+                    
+                   
+                }
+            })
+            const sql2 = `INSERT INTO userauth(name,email,password,image) VALUES(?,?,?,?) `
             const hashedPassword =  bcrypt.hashSync(req.body.password,10)
-            connection.query(sql2,[name,email,hashedPassword],(err,result)=>{
+            connection.query(sql2,[name,email,hashedPassword,image],(err,result)=>{
                 if(err){
                     console.log(err)
                 }
@@ -76,9 +109,6 @@ let createNewUser = (req,res)=>{
 
 
     }
-}
-let getUserByEmail = (email) =>{
-
 }
 
  
