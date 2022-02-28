@@ -1,3 +1,4 @@
+
 const express = require('express')
 const router = express.Router();
 const loginController = require('../controllers/loginControllers')
@@ -6,7 +7,6 @@ const passport = require('passport')
 const forgotPass = require('../controllers/forgot')
 const passportController = require('../controllers/passportController')
 const updateDb = require('../controllers/updateDB')
-//const imageUploadController = require('../controllers/imageUpload')
 const multer = require('multer')
 passportController(passport)
 
@@ -29,6 +29,8 @@ router.get('/home',CheckAuthenticated,(req,res)=>{
     })
 })
 
+
+
 //Posting Home page
 router.post('/home',CheckAuthenticated,(req,res)=>{
 
@@ -41,28 +43,17 @@ router.get('/register',ChecknotAuthenticated,registerController.getRegisterPage)
 //Posting register Pag
 router.post('/register',ChecknotAuthenticated,registerController.createNewUser)
 
-//getting forgot pass
-router.get('/forgotPass',(req,res)=>{
-    const err = req.flash().error || [];
-    res.render('forgotPass',{err})
-})
-
-//posting forgot pass
-router.post('/forgotPass',forgotPass.resetPasswordLink)
-
-
 //update db
 router.post('/update',updateDb.updatePassword)
 
+// forgot password page
+router.get('/forgotPass',forgotPass.getForgotPage)
+router.post('/forgotPass',forgotPass.postForgotPage)
 
-//getting the upload photo page
-// router.get('/UploadPhoto',(req,res)=>{
-//     res.render('fileUpload')
-// })
+//reset Password
+router.get('/resetPass/:id/:token',forgotPass.getResetPage)
+router.post('/resetPass/:id/:token',forgotPass.postResetPage)
 
-//posting the upload photo page
-//const upload = multer({storage:imageUploadController.storageEquip})
-//router.post('/UploadPhoto',upload.single('image'),imageUploadController.imageUploader)
 
 
 //Cheking authentication
